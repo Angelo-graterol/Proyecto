@@ -11,6 +11,13 @@ p{
     height: 150px;
     width: 30%;
     background-image: ;
-    color: #f00;
-    background-image: url();
+    color: #000;
+    background-color: #bbb;
 }
+
+#pico_bolivar{
+    width: 800px;
+    height: auto;
+}
+
+
