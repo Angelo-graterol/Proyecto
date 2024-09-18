@@ -1,23 +1,104 @@
-body{
-    background-color: #78b;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-h1{
-    color: #836;
-    font-size: 30px;
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed; /*Esta propiedad permite que el elemento header este fijo en nuestra página*/
+    z-index: 100; /*Esta propiedad permite que el elemento header se sueprponga a otros elementos en nuestra página*/
 }
 
-p{
-    height: 150px;
-    width: 30%;
-    background-image: ;
-    color: #000;
-    background-color: #bbb;
+.container_header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto; /*Centrar el elemento horizontalmente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
 }
 
-#pico_bolivar{
-    width: 800px;
-    height: auto;
+.logo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
+.logo img{
+    width: 100px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    background-color: #4d6380; /* Fondo transparente por defecto */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color de fondo */
+    position: sticky; /* Hace que el menú se quede fijo en la parte superior */
+    top: 0; /* Posición en la parte superior de la pantalla */
+    width: 100%; /* Asegura que el menú ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+.menu nav{
+    margin: 0px 20px;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li{
+    list-style: none;
+    margin: 20px 16px;
+    padding-left: 15px;
+}
+
+
+.menu nav ul li a{
+    color: var(--color_text-secundary);
+    font-size: var(--lowText_font_size);
+    position: relative;
+}
+
+.menu nav ul li a:hover{
+    color: var(--color_text-primary);
+}
+
+
+.btn_quote{
+    display: block;
+    padding: 8px 40px;
+    border: 2px solid var(--color_text-primary);
+    border-radius: 8px;
+    font-weight: 500;
+    color: var(--color_text-tertiary);
+    margin: 0px 20px;
+    transition: all 300ms;
+}
+
+.btn_quote:hover{
+    color: white;
+    background: var(--color_text-primary);
+}
+
+
+.menu .socialMedia{
+    margin: 0px 10px;
+}
+
+.menu .socialMedia a{
+    margin: 0px 4px;
+    position:relative;
+}
+
+
+.menu .socialMedia img{
+    width: 20px; 
+}
 
