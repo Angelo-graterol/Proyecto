@@ -90,15 +90,18 @@ header{
 
 .menu .socialMedia{
     margin: 0px 10px;
+    position:relative;
+    display: flex;
 }
 
 .menu .socialMedia a{
     margin: 0px 4px;
-    position:relative;
 }
 
 
 .menu .socialMedia img{
-    width: 20px; 
+    width: 10px; 
+    height: auto;
+    margin-left: 15px;
 }
 
