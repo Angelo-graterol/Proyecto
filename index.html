@@ -9,11 +9,11 @@
 <body>
     <header>
         <!-- Contenedor del encabezado -->
-        <div class="conteiner_header">
+        <div class="container_header">
             <!-- Contenedor del logo -->
             <div class="logo">
                 <a href="#">
-                    <img src="" alt="">
+                    <img src="/images/logo.jpeg" alt="">
                 </a>
             </div>
 
@@ -30,13 +30,13 @@
                 </nav>
             </div>
             <!-- Contenedor de las redes sociales -->
-            <div class="social-media">
-                <a href="#"><img src="/images/facebook.png" alt=""></a><!--Facebook-->
-                <a href="#"><img src="/images/instagram.png" alt=""></a><!--Instagram-->
-                <a href="#"><img src="/images/youtube.png" alt=""></a><!--Youtube-->
-                <a href="#"><img src="/images/git_hub.png" alt=""></a><!--Git Hub-->
-                <a href="#"><img src="/images/discord.png" alt=""></a><!--Discord-->
-                <a href="#"><img src="/images/linkedin.png" alt=""></a><!--Linkedin-->
+            <div class="menu social-media">
+                <a href="#"><img class="imagen-socialmedia" src="/images/facebook.png" alt=""></a><!--Facebook-->
+                <a href="#"><img class="imagen-socialmedia" src="/images/instagram.png" alt=""></a><!--Instagram-->
+                <a href="#"><img class="imagen-socialmedia" src="/images/youtube.png" alt=""></a><!--Youtube-->
+                <a href="#"><img class="imagen-socialmedia" src="/images/git_hub.png" alt=""></a><!--Git Hub-->
+                <a  href="#"><img class="imagen-socialmedia" src="/images/discord.png" alt=""></a><!--Discord-->
+                <a href="#"><img class="imagen-socialmedia" src="/images/linkedin.png" alt=""></a><!--Linkedin-->
             </div>
         </div>
     </header>
@@ -48,68 +48,125 @@
                 <section class="text_cover">
                     <h1>Hi I'm Angelo</h1>
                     <p>Desarrollador, estudiante de ingenieria de Sistemas</p>
-                    <a href="" class="boton-text_cover">Contacto</a>
+                    <a href="#" class="btn_quote">Contacto</a>
                 </section>
 
                 <section class="image_cover"><img src="" alt="">
-                    <img src="/images/git_hub.png" alt="">
+                    <img src="/images/portada_sinfondo.png" alt="">
                 </section>
             </div>
         </div>
         <!-- Fin del banner o portada -->
 
         <!-- experiencia, gráfica -->
-        <div class="">
-            <div class="">
+        <div class="container_tecnology">
+            <!-- <div class="">
                 <div class="">
-                    <h3>Experiencia en:</h3>
+                    <h3>Frontend</h3>
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>Java Script</li>
-                        <li>Java</li>
                     </ul>
                 </div>
-            </div>
+                <div>
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>SQL</li>
+                        <li>Python</li>
+                    </ul>
+                </div> -->
+                <h3>Tecnologías y/o Lenguajes</h3>
+                <div class="container_grafico">
 
-            <!-- Grafico de experiencia en tecnologías -->
-            <div class="">
-                <img src="/images/grafico.jpeg" alt="">
-            </div>
+                    <div class="grafico" >
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    
+                    <script>
+                    const ctx = document.getElementById('myChart');
+                  
+                    new Chart(ctx, {
+                      type: 'doughnut',
+                      data: {
+                        labels: ['HTML', 'CSS', 'Java Script', 'Java', 'SQL', 'Python'],
+                        datasets: [{
+                          label: '# of Votes',
+                          data: [20, 14, 9, 7, 1, 2],
+                          borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+                </script>
+                </div>
+
+                </div>
         </div>
         <!-- end -->
 
 
         <!-- Servicios -->
-        <div>
-            <div>
-                <div>
+        <div class="container_servicios">
+            <div class="container_cards">
+                <div class="card">
                     <h4>Desarrollo de Sitios Web</h4>
-                    <div><img src="" alt=""></div>
-                    <p>Solicita tu sitio web para tu marca personal, empresa, proyecto y negocios</p>
+                    <div><img class="img_card1" src="/images/desarrolloweb.png" alt=""></div>
+                    <p>Diseño y desarrollo de interfaces de usuario modernas y atractivas con HTML, CSS y JavaScript, optimizadas para una excelente experiencia visual y funcional. Ofrezco soluciones que se adaptan a dispositivos móviles y de escritorio, con elementos interactivos que enriquecen la usabilidad.</p>
+                    
                 </div>
-                <div>
-                    <h4>Desarrollador junior</h4>
-                    <div><img src="" alt=""></div>
-                    <p>Si necesitas integrante en tu equipo de desarrolladores</p>
+                <div class="card">
+                    <h4>Desarrollo Backend y API </h4>
+                    <div><img class="img_card1" src="/images/backend.jpg" alt=""></div>
+                    <p>Construcción de sistemas confiables que conectan la información entre el servidor y el sitio web, asegurando que los datos se manejen de manera segura y rápida. Diseño estructuras de datos que optimizan el funcionamiento de cada proyecto, facilitando una experiencia de usuario eficiente y fluida</p>
+                    
+                </div>
+                <div class="card">
+                    <h4>Desarrollo en Equipo para Proyectos Colaborativos</h4>
+                    <div><img class="img_card1" src="/images/equipo_desarrolladores.jpg" alt=""></div>
+                    <p>Participación activa en proyectos de desarrollo en equipo, aportando habilidades en frontend y backend para contribuir a objetivos puntuales.</p>
+                    
                 </div>
             </div>
         </div>
         <!-- End Servicios -->
 
         <!-- Proyectos -->
-        <div>
-            <div>
-                <div>
-                    <h4></h4>
+        <div class="container__trust container__card-primary">
+            <div class="trust card__primary">
+                <div class="text__trust text__card-primary">
+                    <p>Genera Confianza Primero</p>
+                    <h1>Controla tu negocio con un solo toque</h1>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="container__trust container__box-cardPrimary">
+                    <div class="card__trust box__card-primary">
+                        <img class="img_card2" src="/images/portada.jpg" alt="">
+                        <h2>Control empresarial completo</h2>
+                        <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exercitation</p>
+                    </div>
+                    <div class="card__trust box__card-primary">
+                        <img class="img_card2" src="/images/portada.jpg" alt="">
+                        <h2>Informes y análisis críticos</h2>
+                        <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exercitation</p>
+                    </div>
+                    <div class="card__trust box__card-primary">
+                        <img class="img_card2" src="/images/portada.jpg" alt="">
+                        <h2>Satisfacción del usuario garantizada</h2>
+                        <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exercitation</p>
+                    </div>
+                </div>
             </div>
         </div>
+
         <!-- end proyectos -->
 
         <!-- Formulario de contacto -->
@@ -117,7 +174,54 @@
             <div></div>
 
             <div>
-                <form action=""></form>
+                <form action="">
+                    <h2>Formulario de contacto</h2>
+            
+                    <!--Simple Inputs-->
+                    <div class="form_input">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" name="nombre" placeholder="John Doo" id="nombre">
+                    </div>
+                    <div class="form_input">
+                        <label for="email">Email</label>
+                        <input type="email" name="nombre" placeholder="ejemplo@gmail.com" id="email">
+                    </div>
+                    
+                    <!--Select y Options-->
+                    <div class="form_input">
+                        <label for="">Tipo de Usuario
+                            <select name="" id="">
+                                <option value="">Cliente/a</option>
+                                <option value="">Empresa</option>
+                                <option value="">Otros</option>
+                            </select>
+                        </label>
+                    </div>
+                    <!--Datalist y Options-->
+                    <div class="form_input">
+                        <label for="">Referente
+                            <input list="referente" name="referente">
+                            <datalist name="type-of-user" id="referente">
+                                <option value="Redes sociales">Soy Dalto</option>
+                                <option value="Empresa">Empresa</option>
+                                <option value="Amigo/a">Amigo/a</option>
+                            </datalist>
+                        </label>
+                    </div>
+                    <!--Textarea-->
+                    <div class="form_input">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea placeholder="Deja tu mensaje..." id="mensaje"></textarea> 
+                    </div>
+                    <div class="form_input">
+                        <label for=""> Acepto los términos y condiciones
+                            <input type="checkbox" name="" id="" class="checkbox">
+                        </label>
+                    </div>
+                    <div class="form_input boton">
+                        <input type="submit" id="boton_enviar">
+                    </div>
+                </form>
             </div>
         </div>
         <!-- end contact form -->
@@ -125,19 +229,31 @@
     </main>
 
     <footer>
-        <div>
-            <div>
-                <div></div>
-                <div></div>
+        <div class="container_footer">
+            <div class="seccion_footer">
+                <div>
+                    <p>Angelo Graterol</p>
+                    <p>contacto</p>
+                    <p>Correo: aagraterolg@ufpso.edu.co</p>
+                </div>
             </div>
-            <div></div>
-            <div></div>
-            <div></div>
+
+            <div class="seccion_footer">
+                <p>Redes Sociales</p>
+                <div class="item"><a href="#"><img class="imagen-socialmedia" src="/images/instagram.png" alt="">Instagram</a></div>
+                <div class="item"><a href="#"><img class="imagen-socialmedia" src="/images/linkedin.png" alt="">linkedin</a></div>
+                <div class="item"><a href="#"><img class="imagen-socialmedia" src="/images/facebook.png" alt="">Facebook</a></div>
+            </div>
+            <div class="seccion_footer">
+                <p>Projectos</p>
+                <div class="item"><a href="#"><img class="imagen-socialmedia" src="/images/git_hub.png" alt="">GitHub</a></div>
+            </div>
         </div>
         <div>
-            
+            <p>© 2024, Angelo Graterol</p>
         </div>
 
     </footer>
 </body>
+
 </html>
